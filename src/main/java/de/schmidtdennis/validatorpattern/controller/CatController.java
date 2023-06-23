@@ -15,9 +15,6 @@ public class CatController {
     private CatService catService;
 
     @Autowired
-    private AbstractAddValidator addValidator;
-
-    @Autowired
     private ValidationRouter router;
 
     @PostMapping("/add")
