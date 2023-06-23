@@ -1,13 +1,20 @@
-package de.schmidtdennis.validatorpattern.validators;
+package de.schmidtdennis.validatorpattern.validators.handler.siamese;
 
+import de.schmidtdennis.validatorpattern.enums.CatType;
 import de.schmidtdennis.validatorpattern.model.AddCatRequest;
+import de.schmidtdennis.validatorpattern.validators.AbstractAddValidator;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Service;
 
 @Service
-public class AddValidator {
+public class SiameseAddValidator extends AbstractAddValidator {
 
-    public void validate(AddCatRequest request){
+    @Override
+    public void validate(AddCatRequest request) {
+
+        if(request.getType().equals(CatType.SIAMESE)){
+            throw new IllegalArgumentException("CatType is not supported");
+        }
 
         if(request.getId() != null){
             throw new IllegalArgumentException("Id must be null");
@@ -34,4 +41,5 @@ public class AddValidator {
         }
 
     }
+
 }

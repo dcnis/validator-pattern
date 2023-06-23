@@ -1,5 +1,6 @@
 package de.schmidtdennis.validatorpattern.model;
 
+import de.schmidtdennis.validatorpattern.enums.CatType;
 import lombok.Data;
 
 import java.util.Date;
@@ -12,5 +13,6 @@ public class AddCatRequest {
     private Long age;
     private Date birthday;
     private Date registerDay;
+    private CatType type;
 
 }
