@@ -1,7 +1,8 @@
-package de.schmidtdennis.validatorpattern.validators;
+package de.schmidtdennis.validatorpattern.validators.router;
 
 import de.schmidtdennis.validatorpattern.enums.CatType;
 import de.schmidtdennis.validatorpattern.model.AddCatRequest;
+import de.schmidtdennis.validatorpattern.validators.AbstractAddValidator;
 import de.schmidtdennis.validatorpattern.validators.handler.ragdoll.RagDollAddValidator;
 import de.schmidtdennis.validatorpattern.validators.handler.siamese.SiameseAddValidator;
 import org.springframework.stereotype.Service;

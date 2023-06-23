@@ -3,7 +3,7 @@ package de.schmidtdennis.validatorpattern.controller;
 import de.schmidtdennis.validatorpattern.model.AddCatRequest;
 import de.schmidtdennis.validatorpattern.service.CatService;
 import de.schmidtdennis.validatorpattern.validators.AbstractAddValidator;
-import de.schmidtdennis.validatorpattern.validators.ValidationRouter;
+import de.schmidtdennis.validatorpattern.validators.router.ValidationRouter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
