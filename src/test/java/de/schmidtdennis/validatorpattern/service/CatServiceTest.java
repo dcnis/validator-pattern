@@ -17,21 +17,21 @@ class CatServiceTest {
         // GIVEN
 
         // WHEN
-        String id = String.format("MA%08d", 1);
+        String id = String.format("MA%012d", 1);
 
         // THEN
-        Assertions.assertThat(id).isEqualTo("MA00000001");
+        Assertions.assertThat(id).isEqualTo("MA000000000001");
     }
 
     @Test
-    public void test(){
+    public void testDoubleDigit(){
         // GIVEN
 
         // WHEN
-        String id = String.format("MA%08d", 1);
+        String id = String.format("MA%012d", 12);
 
         // THEN
-        Assertions.assertThat(id).isEqualTo("MA00000001");
+        Assertions.assertThat(id).isEqualTo("MA000000000012");
     }
 
 }
